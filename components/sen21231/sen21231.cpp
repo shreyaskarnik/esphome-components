@@ -30,7 +30,7 @@ void Sen21231Sensor::dump_config() {
     this->read_bytes(PERSON_SENSOR_I2C_ADDRESS, (uint8_t *)&results,
                      sizeof(results));
     if (results.num_faces > 0) {
-        ESP_LOGD(TAG, "SEN21231: %d faces detected", results.num_faces);
+        ESP_LOGI(TAG, "SEN21231: %d faces detected", results.num_faces);
         this->publish_state(true);
     }
 }
