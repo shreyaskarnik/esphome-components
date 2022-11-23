@@ -39,7 +39,7 @@ void Sen21231Sensor::dump_config() {
     }
 
     if (results.num_faces == 1) {
-        ESP_LOGI(TAG, "SEN21231: is facing towards camera",
+        ESP_LOGI(TAG, "SEN21231: is facing towards camera: %d",
                  results.faces[0]->is_facing);
     }
 }
