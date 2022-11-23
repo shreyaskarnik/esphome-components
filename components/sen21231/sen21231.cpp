@@ -6,16 +6,7 @@ namespace sen21231_sensor {
 
 static const char *TAG = "sen21231_sensor.sensor";
 
-void Sen21231Sensor::read_data_() {
-    // read data and cast it into the person_sensor_results_t struct
-    person_sensor_results_t results;
-    this->read_bytes(PERSON_SENSOR_REG_RESULTS, (uint8_t *)&results,
-                     sizeof(results));
-    if (results.num_faces > 0) {
-        ESP_LOGD(TAG, "SEN21231: %d faces detected", results.num_faces);
-        this->publish_state(true);
-    }
-}
+void Sen21231Sensor::read_data_() {}
 void Sen21231Sensor::setup() {}
 
 void Sen21231Sensor::update() {}
