@@ -12,8 +12,8 @@ void Sen21231Sensor::update() {
     person_sensor_results_t results;
     this->read_bytes(PERSON_SENSOR_I2C_ADDRESS, (uint8_t *)&results,
                      sizeof(results));
+    ESP_LOGI(TAG, "SEN21231: %d faces detected", results.num_faces);
     if (results.num_faces > 0) {
-        ESP_LOGI(TAG, "SEN21231: %d faces detected", results.num_faces);
         this->publish_state(true);
     }
 }
@@ -29,8 +29,8 @@ void Sen21231Sensor::dump_config() {
     person_sensor_results_t results;
     this->read_bytes(PERSON_SENSOR_I2C_ADDRESS, (uint8_t *)&results,
                      sizeof(results));
+    ESP_LOGI(TAG, "SEN21231: %d faces detected", results.num_faces);
     if (results.num_faces > 0) {
-        ESP_LOGI(TAG, "SEN21231: %d faces detected", results.num_faces);
         this->publish_state(true);
     }
 }
