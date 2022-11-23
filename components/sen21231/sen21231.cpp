@@ -15,6 +15,8 @@ void Sen21231Sensor::update() {
     ESP_LOGI(TAG, "SEN21231: %d faces detected", results.num_faces);
     if (results.num_faces > 0) {
         this->publish_state(true);
+    } else {
+        this->publish_state(false);
     }
 }
 
@@ -32,6 +34,8 @@ void Sen21231Sensor::dump_config() {
     ESP_LOGI(TAG, "SEN21231: %d faces detected", results.num_faces);
     if (results.num_faces > 0) {
         this->publish_state(true);
+    } else {
+        this->publish_state(false);
     }
 }
 
