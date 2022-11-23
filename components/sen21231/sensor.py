@@ -10,7 +10,7 @@ CONF_I2C_ADDR =  0x62
 sen21231_sensor_ns = cg.esphome_ns.namespace('sen21231_sensor')
 Sen21231Sensor = sen21231_sensor_ns.class_('Sen21231Sensor', cg.PollingComponent, i2c.I2CDevice)
 
-CONFIG_SCHEMA = sensor.sensor_schema(UNIT_EMPTY, ICON_EMPTY, 1).extend({
+CONFIG_SCHEMA = sensor.sensor_schema(unit_of_measurement=UNIT_EMPTY, icon=ICON_EMPTY, accuracy_decimal=1).extend({
     cv.GenerateID(): cv.declare_id(Sen21231Sensor),
 }).extend(cv.polling_component_schema('60s')).extend(i2c.i2c_device_schema(CONF_I2C_ADDR))
 
