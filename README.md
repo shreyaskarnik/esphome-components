@@ -14,7 +14,7 @@ I tested the custom component on a ESP32 dev board with the person sensor connec
 
 ## Example
 
-![example](example.png)
+![example](example_logs.png)
 
 ## ESPHome Configuration
 
