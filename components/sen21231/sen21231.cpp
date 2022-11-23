@@ -16,7 +16,7 @@ void Sen21231Sensor::dump_config() {
     if (this->is_failed()) {
         ESP_LOGE(TAG, "Communication with SEN21231 failed!");
     }
-    ESP_LOGE(TAG, "SEN21231: %s", this->is_failed() ? "FAILED" : "OK");
+    ESP_LOGI(TAG, "SEN21231: %s", this->is_failed() ? "FAILED" : "OK");
 }
 
 } // namespace sen21231_sensor
