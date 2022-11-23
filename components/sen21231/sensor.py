@@ -12,7 +12,7 @@ Sen21231Sensor = sen21231_sensor_ns.class_('Sen21231Sensor', cg.PollingComponent
 
 CONFIG_SCHEMA = sensor.sensor_schema(unit_of_measurement=UNIT_EMPTY, icon=ICON_EMPTY, accuracy_decimals=1).extend({
     cv.GenerateID(): cv.declare_id(Sen21231Sensor),
-}).extend(cv.polling_component_schema('60s')).extend(i2c.i2c_device_schema(CONF_I2C_ADDR))
+}).extend(cv.polling_component_schema('30s')).extend(i2c.i2c_device_schema(CONF_I2C_ADDR))
 
 def to_code(config):
     var = cg.new_Pvariable(config[CONF_ID])
