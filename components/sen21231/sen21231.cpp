@@ -1,5 +1,5 @@
-#include "esphome/core/log.h"
 #include "sen21231.h"
+#include "esphome/core/log.h"
 
 namespace esphome {
 namespace sen21231_sensor {
@@ -16,7 +16,7 @@ void Sen21231Sensor::dump_config() {
     if (this->is_failed()) {
         ESP_LOGE(TAG, "Communication with SEN21231 failed!");
     }
-    LOG_SENSOR("  ", "Face Detected");
+    ESP_LOGE(TAG, "SEN21231: %s", this->is_failed() ? "FAILED" : "OK");
 }
 
 } // namespace sen21231_sensor
