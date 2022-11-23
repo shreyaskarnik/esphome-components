@@ -1,18 +1,16 @@
 #include "esphome/core/log.h"
-#include "sen21231.h"
+#include "sen21231_sensor.h"
 
 namespace esphome {
-namespace sen21231 {
+namespace sen21231_sensor {
 
-static const char *TAG = "sen21231.sensor";
+static const char *TAG = "sen21231_sensor.sensor";
 
-void SEN21231Component::setup() {}
+void Sen21231Sensor::setup() {}
 
-void SEN21231Component::loop() {}
+void Sen21231Sensor::update() {}
 
-void SEN21231Component::dump_config() {
-    ESP_LOGCONFIG(TAG, " SEN21231 component");
-}
+void Sen21231Sensor::dump_config() {}
 
-} // namespace sen21231
+} // namespace sen21231_sensor
 } // namespace esphome

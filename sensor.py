@@ -5,13 +5,13 @@ from esphome.const import CONF_ID, ICON_EMPTY, UNIT_EMPTY
 
 DEPENDENCIES = ['i2c']
 
-CONF_I2C_ADDR = 0x62
+CONF_I2C_ADDR =  0x62
 
-sen21231_sensor_ns = cg.esphome_ns.namespace('sen21231')
-SEN21231_sensor = sen21231_sensor_ns.class_('SEN21231Component', cg.PollingComponent, i2c.I2CDevice)
+sen21231_sensor_ns = cg.esphome_ns.namespace('sen21231_sensor')
+Sen21231Sensor = sen21231_sensor_ns.class_('Sen21231Sensor', cg.PollingComponent, i2c.I2CDevice)
 
 CONFIG_SCHEMA = sensor.sensor_schema(UNIT_EMPTY, ICON_EMPTY, 1).extend({
-    cv.GenerateID(): cv.declare_id(SEN21231_sensor),
+    cv.GenerateID(): cv.declare_id(Sen21231Sensor),
 }).extend(cv.polling_component_schema('60s')).extend(i2c.i2c_device_schema(CONF_I2C_ADDR))
 
 def to_code(config):
