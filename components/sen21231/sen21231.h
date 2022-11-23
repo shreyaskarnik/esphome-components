@@ -9,6 +9,8 @@
 
 namespace esphome {
 namespace sen21231_sensor {
+// The I2C address of the person sensor board.
+static const uint8_t PERSON_SENSOR_I2C_ADDRESS = 0x62;
 static const uint8_t PERSON_SENSOR_REG_MODE = 0x01;
 static const uint8_t PERSON_SENSOR_REG_ENABLE_ID = 0x02;
 static const uint8_t PERSON_SENSOR_REG_SINGLE_SHOT = 0x03;
