@@ -70,6 +70,7 @@ class Sen21231Sensor : public sensor::Sensor,
     void setup() override;
     void update() override;
     void dump_config() override;
+    void read_data_() override;
 };
 
 } // namespace sen21231_sensor
