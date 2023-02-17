@@ -68,9 +68,10 @@ class Sen21231Sensor : public sensor::Sensor,
                        public PollingComponent,
                        public i2c::I2CDevice {
   public:
-    void setup() override;
     void update() override;
     void dump_config() override;
+
+  protected:
     void read_data_();
 };
 
